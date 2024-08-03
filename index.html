@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading List Web App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>My Reading List</h1>
+    <button id="newBookButton" class="button"><i class="fas fa-plus"></i> New Book</button>
+
+    <nav>
+        <button class="nav-button" id="readingTab">Reading</button>
+        <button class="nav-button" id="completedTab">Completed</button>
+        <button class="nav-button" id="onHoldTab">On Hold</button>
+    </nav>
+
+    <div id="bookFormModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="bookForm">
+                <input type="text" id="title" placeholder="Title" required>
+                <div id="suggestions"></div>
+                <input type="text" id="author" placeholder="Author" required>
+                <input type="text" id="publishedDate" placeholder="Published Date">
+                <input type="text" id="coverImage" placeholder="Cover Image URL">
+                <img id="coverPreview" src="placeholder.png" alt="Cover Preview">
+                <input type="number" id="totalPages" placeholder="Total Pages" required>
+                <div class="page-control">
+                    <button type="button" id="decrementPage" class="page-button"><i class="fas fa-minus"></i></button>
+                    <input type="number" id="currentPage" placeholder="Current Page" required>
+                    <button type="button" id="incrementPage" class="page-button"><i class="fas fa-plus"></i></button>
+                </div>
+                <select id="status">
+                    <option value="reading">Reading</option>
+                    <option value="completed">Completed</option>
+                    <option value="on-hold">On Hold</option>
+                </select>
+                <button type="submit" class="button">Save Book</button>
+            </form>
+        </div>
+    </div>
+
+    <h2>Search</h2>
+    <input type="text" id="search" placeholder="Search by title or author">
+
+    <div id="content">
+        <div id="readingList" class="book-list"></div>
+        <div id="completedList" class="book-list"></div>
+        <div id="onHoldList" class="book-list"></div>
+    </div>
+
+    <div class="export-import-buttons">
+        <button id="exportButton" class="button"><i class="fas fa-file-export"></i> Export</button>
+        <button id="importButton" class="button"><i class="fas fa-file-import"></i> Import</button>
+        <input type="file" id="importFile" style="display: none;">
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
