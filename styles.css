@@ -40,11 +40,24 @@ button:hover {
     background-color: #45a049;
 }
 
+.nav-tabs {
+    display: flex;
+    justify-content: space-between;
+}
+
 .nav-button {
     display: inline-block;
-    width: calc(33.33% - 10px);
+    flex: 1;
     margin: 0 5px;
     background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 .nav-button:hover {
@@ -131,6 +144,7 @@ input[type="number"]::-webkit-inner-spin-button {
     border: 1px solid #ddd;
     border-radius: 5px;
     transition: transform 0.3s;
+    position: relative; /* For positioning the published date */
 }
 
 .book-item:hover {
@@ -171,26 +185,36 @@ input[type="number"]::-webkit-inner-spin-button {
 .page-control {
     display: flex;
     align-items: center;
+    width: 10%;
 }
 
 .page-button {
-    width: 40px;
-    height: 40px;
+    width: 30px; /* Adjusted width */
+    height: 30px; /* Adjusted height */
     background: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px 5px 10px 0;
+    margin: 0 5px; /* Adjusted margin for better spacing */
     transition: background-color 0.3s;
+    padding: 10px;
 }
 
 .page-button:hover {
     background-color: #45a049;
+}
+
+.published-date {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+    color: #666;
 }
 
 #suggestions {
@@ -237,3 +261,4 @@ input[type="number"]::-webkit-inner-spin-button {
 .export-import-buttons button i {
     margin-right: 5px;
 }
+

@@ -146,13 +146,19 @@ document.addEventListener('DOMContentLoaded', () => {
             bookItem.innerHTML = `
                 <img src="${book.coverImage || 'placeholder.png'}" alt="Cover" class="book-cover">
                 <div class="book-info">
-                    <strong>${book.title}</strong> by ${book.author} (Published: ${book.publishedDate})<br>
-                    Pages: <button class="page-control-button" data-index="${index}" data-action="decrement"><i class="fas fa-minus"></i></button> ${book.currentPage}/${book.totalPages} <button class="page-control-button" data-index="${index}" data-action="increment"><i class="fas fa-plus"></i></button>
+                    <strong>${book.title}</strong> by ${book.author}
+                    <div class="page-control">
+                        <button class="page-control-button" data-index="${index}" data-action="decrement"><i class="fas fa-minus"></i></button> 
+                        ${book.currentPage}/${book.totalPages} 
+                        <button class="page-control-button" data-index="${index}" data-action="increment"><i class="fas fa-plus"></i></button>
+                    </div>
                 </div>
                 <div class="book-actions">
                     <button class="edit-button" data-index="${index}"><i class="fas fa-edit"></i></button>
                     <button class="delete-button" data-index="${index}"><i class="fas fa-trash"></i></button>
-                </div>`;
+                </div>
+                <div class="published-date">Published: ${book.publishedDate}</div>
+            `;
             if (book.status === 'reading') {
                 readingList.appendChild(bookItem);
             } else if (book.status === 'completed') {
@@ -206,13 +212,19 @@ document.addEventListener('DOMContentLoaded', () => {
             bookItem.innerHTML = `
                 <img src="${book.coverImage || 'placeholder.png'}" alt="Cover" class="book-cover">
                 <div class="book-info">
-                    <strong>${book.title}</strong> by ${book.author} (Published: ${book.publishedDate})<br>
-                    Pages: <button class="page-control-button" data-index="${index}" data-action="decrement"><i class="fas fa-minus"></i></button> ${book.currentPage}/${book.totalPages} <button class="page-control-button" data-index="${index}" data-action="increment"><i class="fas fa-plus"></i></button>
+                    <strong>${book.title}</strong> by ${book.author}
+                    <div class="page-control">
+                        <button class="page-control-button" data-index="${index}" data-action="decrement"><i class="fas fa-minus"></i></button> 
+                        ${book.currentPage}/${book.totalPages} 
+                        <button class="page-control-button" data-index="${index}" data-action="increment"><i class="fas fa-plus"></i></button>
+                    </div>
                 </div>
                 <div class="book-actions">
                     <button class="edit-button" data-index="${index}"><i class="fas fa-edit"></i></button>
                     <button class="delete-button" data-index="${index}"><i class="fas fa-trash"></i></button>
-                </div>`;
+                </div>
+                <div class="published-date">Published: ${book.publishedDate}</div>
+            `;
             if (book.status === 'reading') {
                 readingList.appendChild(bookItem);
             } else if (book.status === 'completed') {
