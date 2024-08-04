@@ -18,13 +18,16 @@ The Reading List Web App is a user-friendly application designed to help users m
 - **Font Awesome**: For beautiful and scalable icons used in the application.
 - **Local Storage**: For persistent storage of the user's reading list data.
 
-## Installation
+## Usage
 
 To use the Reading List Web App:
 
-1. Clone or download the repository from GitHub.
-2. Open the `index.html` file in your preferred web browser.
-3. Start managing your reading list!
+1. Go to [Reading List Web App](https://sanyam-g.github.io/Reading-List/)
+2. Click on **Add New** to open the form for adding a new book.
+3. Search for a book name to get suggestions and auto-fill book details.
+4. Add or edit the book details as necessary and save the book.
+5. Use the **Export** button to download your reading list as a JSON file.
+6. Use the **Import** button to upload a JSON file and restore your reading list data.
 
 ## Contributing
 
@@ -38,9 +41,6 @@ Future development ideas for the Reading List Web App include:
 - **Customizable Themes**: Allow users to customize the app’s appearance with different themes.
 - **Sync with Cloud Storage**: Enable synchronization with cloud storage services for better accessibility and backup options.
 
-## Known Issues
-
-- **Navigation Bugs**: Some navigation routes may not work correctly on certain devices.
 
 ## Contact
 
